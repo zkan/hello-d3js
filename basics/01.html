@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Hello, D3.js</title>
+  <script src="../d3/d3.min.js"></script>
+</head>
+<body>
+  <div>Hello</div>
+  <script>
+    var someData = ['a', 'b', 'c', 'd', 'e']
+    d3.select('body').selectAll('div')
+      .data(someData)
+      .enter()
+      .append('div')
+      .html('Wow')
+      .append('span')
+      .html('Even More Wow')
+      .style('font-weight', '900')
+  </script>
+</body>
+</html>

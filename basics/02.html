@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Hello, D3.js</title>
+  <script src="../d3/d3.min.js"></script>
+</head>
+<body>
+  <div>Hello</div>
+  <script>
+    const someNumbers = [17, 82, 9, 500, 40]
+    const smallerNumbers = someNumbers.filter(d => d <= 40)
+    d3.select('body').selectAll('div')
+      .data(smallerNumbers)
+      .enter()
+      .append('div')
+      .html(d => d)
+  </script>
+</body>
+</html>
