@@ -14,8 +14,10 @@
                 .attr("width", w)
                 .attr("height", h)
 
+    // select all rects
     svg.selectAll("rect")
        .data(dataset)
+       // will take the data and perform below from each data item
        .enter()
        .append("rect")
        .attr("x", function(d, i) {
