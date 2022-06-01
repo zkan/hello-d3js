@@ -46,6 +46,14 @@
         "translate(" +
         xCenter + "," +
         yCenter + ")")
+
+    const xCenter2 = xCenter + 1.2 * circleRad
+    g.append("circle")
+      .attr("r", circleRad)
+      .attr('transform',
+        "translate(" +
+        xCenter2 + "," +
+        yCenter + ")")
   </script>
 </body>
 </html>
