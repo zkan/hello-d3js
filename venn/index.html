@@ -54,6 +54,17 @@
         "translate(" +
         xCenter2 + "," +
         yCenter + ")")
+
+    const offsetFactor = 1.2
+    const offset = offsetFactor * circleRad
+    const xCenter3 = xCenter + offset / 2
+    const yCenter3 = yCenter + Math.sqrt(3) * offset / 2
+    g.append("circle")
+      .attr("r", circleRad)
+      .attr('transform',
+        "translate(" +
+        xCenter3 + "," +
+        yCenter3 + ")");
   </script>
 </body>
 </html>
