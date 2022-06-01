@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+    circle {
+      fill: none;
+      stroke: #999999;
+      stroke-width: 3px;
+    }
+  </style>
+</head>
+<body>
+  <svg width="800" height="500"></svg>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    // drawing board
+    const svg = d3.select("svg")
+    const margin = {
+      top: 20,
+      right: 20,
+      bottom: 30,
+      left: 40
+    }
+    const width = +svg.attr("width") - margin.left - margin.right
+    const height = +svg.attr("height") - margin.top - margin.bottom
+
+    // piece of paper
+    const g = svg.append("g")
+      .attr("transform",
+        "translate(" +
+        margin.left +
+        "," +
+        margin.top + ")")
+
+    const circleRad = 100
+    const xCenter = 150
+    const yCenter = 150
+    g.append("circle")
+      .attr("r", circleRad)
+      .attr("transform",
+        "translate(" +
+        xCenter + "," +
+        yCenter + ")")
+  </script>
+</body>
+</html>
