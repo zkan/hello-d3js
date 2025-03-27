@@ -2,6 +2,6 @@
 
 ## Starting a Server
 
-```
-python3.6 -m http.server 8000
+```bash
+make serve
 ```
